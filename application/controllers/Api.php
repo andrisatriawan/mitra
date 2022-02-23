@@ -23,6 +23,12 @@ class Api extends CI_Controller
             ];
 
             $this->session->set_userdata($data);
+
+            echo $this->session->userdata('nama') . "<br>";
+            echo $this->session->userdata('id') . "<br>";
+            echo $this->session->userdata('username') . "<br>";
+            echo $this->session->userdata('member_nama') . "<br>";
+            echo $this->session->userdata('level_user') . "<br>";
         }
     }
 
