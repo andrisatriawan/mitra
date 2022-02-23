@@ -16,7 +16,7 @@ class Dashboard extends CI_Controller
         $user_agent = $_SERVER['HTTP_USER_AGENT'];
 
         $q_session = $this->db->get_where('session', ['ip_address' => $ip_address]);
-        $row = $q_session->result_array();
+        $row = $q_session->row_array();
         $data['nama'] = '';
         if ($q_session->num_rows() != 0) {
             if ($row['user_agent'] == $user_agent) {
